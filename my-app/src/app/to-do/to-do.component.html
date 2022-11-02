@@ -1,0 +1,27 @@
+<app-header></app-header>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of toDoArr">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.content }}</td>
+      <td>
+        <button type="button" class="danger" (click)="setDone(item)">
+          Fatto
+        </button>
+      </td>
+      <td>
+        <button type="button" class="danger" (click)="removeTask(item)">
+          Elimina
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-footer></app-footer>
